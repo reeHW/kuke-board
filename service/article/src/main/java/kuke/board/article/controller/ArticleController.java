@@ -20,13 +20,13 @@ public class ArticleController {
     public ArticleResponse create(@RequestBody ArticleCreateRequest request){
         return articleService.create(request);
     }
-    @PutMapping("/v1/articles/{articeId}")
-    public ArticleResponse update(@PathVariable Long articeId, @RequestBody ArticleUpdateRequest request) {
-        return articleService.update(articeId, request);
+    @PutMapping("/v1/articles/{articleId}")
+    public ArticleResponse update(@PathVariable Long articleId, @RequestBody ArticleUpdateRequest request) {
+        return articleService.update(articleId, request);
     }
 
-    @DeleteMapping("/v1/articles/{articeId}")
-    public void delete(@PathVariable long articeId) {
-        articleService.delete(articeId);
+    @DeleteMapping("/v1/articles/{articleId}")
+    public void delete(@PathVariable long articleId) {
+        articleService.delete(articleId);
     }
 }

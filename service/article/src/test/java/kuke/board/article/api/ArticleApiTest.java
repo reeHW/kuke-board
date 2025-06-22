@@ -31,7 +31,8 @@ public class ArticleApiTest {
     }
     @Test
     void readTest() {
-        ArticleResponse response = read(12232142143252L);
+        Long id = 195076980781219840L; // L 붙이기!
+        ArticleResponse response = read(id);
         System.out.println("response = " +response);
 
     }
@@ -44,8 +45,9 @@ public class ArticleApiTest {
 
     @Test
     void updateTest(){
-        update (12232142143252L);
-        ArticleResponse response = read(12232142143252L);
+        long id = 195076980781219840L;
+        update (id);
+        ArticleResponse response = read(id);
         System.out.println("response = " + response);
 
     }
